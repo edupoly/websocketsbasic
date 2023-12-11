@@ -29,4 +29,4 @@ var employeeRoutes = require('./routes/employee/employee.routes')
 app.use("/student",studentRoutes)
 app.use("/employee",employeeRoutes)
 
-server.listen(3900,()=>{console.log('running on 3900')})
+server.listen(process.env.PORT,()=>{console.log('running on 3900')})
