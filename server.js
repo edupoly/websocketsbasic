@@ -10,8 +10,8 @@ var io = new Server(server);
 app.use(bodyParser.urlencoded({extends:false}));
 console.log(process.env.USER_NAME)
 var goals = {
-    BRA:5,
-    ARG:7
+    BRA:0,
+    ARG:0
 }
 io.on("connection",function(socket){
     io.emit('update',goals)
@@ -29,4 +29,4 @@ var employeeRoutes = require('./routes/employee/employee.routes')
 app.use("/student",studentRoutes)
 app.use("/employee",employeeRoutes)
 
-server.listen(process.env.PORT,()=>{console.log('running on process.env.PORT')})
+server.listen(process.env.PORT||3900,()=>{console.log('running on '+(process.env.PORT||3900))})
