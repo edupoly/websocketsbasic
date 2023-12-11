@@ -10,8 +10,8 @@ var io = new Server(server);
 app.use(bodyParser.urlencoded({extends:false}));
 console.log(process.env.USER_NAME)
 var goals = {
-    BRA:0,
-    ARG:0
+    BRA:5,
+    ARG:7
 }
 io.on("connection",function(socket){
     io.emit('update',goals)
